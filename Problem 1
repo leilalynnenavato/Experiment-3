@@ -1,0 +1,43 @@
+//This program is the solution to problem #1
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number[10];
+    int value, smallestNumber, largestNumber, smallValue, largeValue;
+    double total, average;
+    
+    cout << "Enter 10 integers: ";
+        
+    for (value = 0; value < 10; value++)
+        cin >> number[value];
+        
+    for (value = 0; value < 10; value++)
+        cout << number[value] << " ";
+        cout << "\n";
+        
+    total = 0;
+    for (value = 0; value < 10; value++)
+        total = total + number[value];
+        average = total / 10;
+        cout << "The total of the integers is: " << total << "\n";
+        cout << "The average of the integers is: " << average << "\n";
+        
+    smallValue = 0;
+    for (value = 0; value < 10; value++)
+        if (number[smallValue] > number[value])
+            smallValue = value;
+            smallestNumber = number[smallValue];
+            cout << "The smallest integer is: " << smallestNumber << "\n";
+            
+    largeValue = 0;
+    for (value = 0; value < 10; value++)
+        if (number[largeValue] < number[value])
+            largeValue = value;
+            largestNumber = number[largeValue];
+            cout << "The largest integer is: " << largestNumber << "\n";
+            
+    return 0;
+}
