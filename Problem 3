@@ -1,0 +1,39 @@
+//This program is the solution for problem #3
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    char str[50];
+    int i, j, place, size = 0;
+    
+    cout << "Input a string: ";
+    cin.getline(str, 50);
+    
+    for (i = 0; str[i]!='\0'; i++)
+    {
+        size++;
+    }
+    
+    cout << "Size of the array: " << size << "\n";
+    cout << "Reversed form of the string: " << strrev(str) << "\n";
+    
+    for (i = 0; i < size; i++)
+    {
+    	for (j = i + 1; j < size; j++)
+    	{
+    		if (str[j] < str[i])
+    		{
+    			place = str[i];
+    			str[i] = str[j];
+    			str[j] = place;
+			}
+		}
+	}
+	
+	cout << "Arrangement of array: " << str;
+    
+    return 0;
+}
