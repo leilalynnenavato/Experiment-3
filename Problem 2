@@ -1,0 +1,43 @@
+//This program is the solution for problem #2
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int tempA[7], tempB[7], tempC[7];
+    int day;
+    
+    cout << "Enter the temperature for Provinces A, B and C for the whole week.\n";
+        
+    for (day = 0; day < 7; day++)
+    {
+        cout << "Province A, Day " << day + 1 << ": ";
+        cin >> tempA[day];
+    }
+    
+    for (day = 0; day < 7; day++)
+    {
+        cout << "Province B, Day " << day + 1 << ": ";
+        cin >> tempB[day];
+    }
+    
+    for (day = 0; day < 7; day++)
+    {
+        cout << "Province C, Day " << day + 1 << ": ";
+        cin >> tempC[day];
+    }
+    
+    cout << "\n";
+    
+    for (day = 0; day < 7; day++)
+        cout << "Province A, Day " << day + 1 << " = " << tempA[day] << "\n";
+        
+    for (day = 0; day < 7; day++)
+        cout << "Province B, Day " << day + 1 << " = " << tempB[day] << "\n";
+    
+    for (day = 0; day < 7; day++)
+        cout << "Province C, Day " << day + 1 << " = " << tempC[day] << "\n";
+            
+    return 0;
+}
